@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic DNS Service - Technitium DNS Server</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://technitium.com/logo.png" alt="Technitium Logo">
+                <h1>Dynamic DNS Service</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li class="nav-unauth"><a href="#login">Login</a></li>
+                    <li class="nav-unauth"><a href="#register">Register</a></li>
+                    <li class="nav-auth hidden"><a href="#domains">My Domains</a></li>
+                    <li class="nav-auth hidden"><a href="#api-keys">API Keys</a></li>
+                    <li class="nav-auth hidden"><a href="#billing">Billing</a></li>
+                    <li class="nav-auth hidden"><a href="#profile">Profile</a></li>
+                    <li class="nav-auth hidden"><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="container">
+                <div class="hero">
+                    <h2>Dynamic DNS Made Simple</h2>
+                    <p>Keep your domains pointing to your IP address even when it changes. Perfect for home servers, remote access, and more.</p>
+                    <a href="#register" class="btn btn-primary nav-unauth">Get Started</a>
+                    <a href="#domains" class="btn btn-primary nav-auth hidden">Manage Domains</a>
+                </div>
+
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast Updates</h3>
+                        <p>IP address changes are detected and updated quickly to minimize downtime.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure</h3>
+                        <p>All updates are authenticated and encrypted to ensure your domains are protected.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h3>API Access</h3>
+                        <p>Full API access for integration with your own applications and scripts.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mb-5">
+                    <h2 class="mb-3">How It Works</h2>
+                    <div class="features">
+                        <div class="feature-card">
+                            <i class="fas fa-user-plus"></i>
+                            <h3>1. Create Account</h3>
+                            <p>Sign up for a free account to get started with our Dynamic DNS service.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-globe"></i>
+                            <h3>2. Add Domain</h3>
+                            <p>Add your domain and get a unique update URL with your secure token.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-sync-alt"></i>
+                            <h3>3. Update IP</h3>
+                            <p>Use our update URL in your router, script, or client to keep your IP address updated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="hidden">
+            <div class="container">
+                <h2 class="text-center mb-4">Features</h2>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast Updates</h3>
+                        <p>IP address changes are detected and updated quickly to minimize downtime.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure</h3>
+                        <p>All updates are authenticated and encrypted to ensure your domains are protected.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h3>API Access</h3>
+                        <p>Full API access for integration with your own applications and scripts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>IPv4 & IPv6 Support</h3>
+                        <p>Full support for both IPv4 and IPv6 addresses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-history"></i>
+                        <h3>Update History</h3>
+                        <p>Track all IP address updates with detailed history.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-key"></i>
+                        <h3>Secure Tokens</h3>
+                        <p>Each domain has its own secure update token that can be regenerated at any time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-terminal"></i>
+                        <h3>Command Line Support</h3>
+                        <p>Easy to use with curl, wget, or any HTTP client.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>TTL Control</h3>
+                        <p>Configure Time-To-Live settings for your DNS records.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Support</h3>
+                        <p>Get help when you need it with our support options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="hidden">
+            <div class="container">
+                <h2 class="text-center mb-4">Pricing Plans</h2>
+                
+                <div class="pricing">
+                    <div class="pricing-card">
+                        <h3>Free</h3>
+                        <div class="price">$0<span>/month</span></div>
+                        <ul>
+                            <li>Up to 3 domains</li>
+                            <li>Basic update frequency</li>
+                            <li>Community support</li>
+                            <li>IPv4 & IPv6 support</li>
+                        </ul>
+                        <a href="#register" class="btn btn-primary nav-unauth">Get Started</a>
+                        <button class="btn btn-secondary nav-auth hidden" disabled>Current Plan</button>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <h3>Basic</h3>
+                        <div class="price">$5.99<span>/month</span></div>
+                        <ul>
+                            <li>Up to 10 domains</li>
+                            <li>Faster update frequency</li>
+                            <li>Email support</li>
+                            <li>IPv4 & IPv6 support</li>
+                            <li>API access</li>
+                        </ul>
+                        <a href="#register" class="btn btn-primary nav-unauth">Get Started</a>
+                        <button class="btn btn-primary nav-auth hidden subscribe-btn" data-plan="basic">Subscribe</button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Pro</h3>
+                        <div class="price">$9.99<span>/month</span></div>
+                        <ul>
+                            <li>Up to 50 domains</li>
+                            <li>Fastest update frequency</li>
+                            <li>Priority support</li>
+                            <li>IPv4 & IPv6 support</li>
+                            <li>Advanced API access</li>
+                            <li>Custom domain settings</li>
+                        </ul>
+                        <a href="#register" class="btn btn-primary nav-unauth">Get Started</a>
+                        <button class="btn btn-primary nav-auth hidden subscribe-btn" data-plan="pro">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login" class="hidden">
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Login</h2>
+                    
+                    <div id="login-message" class="hidden"></div>
+                    
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-username">Username or Email</label>
+                            <input type="text" id="login-username" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" id="login-btn" class="btn btn-primary" data-original-text="Login">Login</button>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <p>Don't have an account? <a href="#register">Register</a></p>
+                            <p><a href="#forgot-password">Forgot Password?</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Section -->
+        <section id="register" class="hidden">
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Register</h2>
+                    
+                    <div id="register-message" class="hidden"></div>
+                    
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-username">Username</label>
+                            <input type="text" id="register-username" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-email">Email</label>
+                            <input type="email" id="register-email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="register-confirm-password">Confirm Password</label>
+                            <input type="password" id="register-confirm-password" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" id="register-btn" class="btn btn-primary" data-original-text="Register">Register</button>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <p>Already have an account? <a href="#login">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domains Section -->
+        <section id="domains" class="hidden">
+            <div class="container">
+                <h2 class="mb-4">My Domains</h2>
+                
+                <div id="domains-message" class="hidden"></div>
+                
+                <div id="domain-details" class="hidden"></div>
+                
+                <div id="domains-container">
+                    <div id="domains-list">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+                
+                <div id="add-domain-container" class="mt-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Add New Domain</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="add-domain-message" class="hidden"></div>
+                            
+                            <form id="add-domain-form">
+                                <div class="form-group">
+                                    <label for="domain-name">Domain Name</label>
+                                    <input type="text" id="domain-name" class="form-control" required placeholder="e.g., home.example.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="zone-name">Zone Name (optional)</label>
+                                    <input type="text" id="zone-name" class="form-control" placeholder="e.g., example.com">
+                                    <small>Leave blank to auto-detect from domain name.</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" id="add-domain-btn" class="btn btn-primary" data-original-text="Add Domain">Add Domain</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Keys Section -->
+        <section id="api-keys" class="hidden">
+            <div class="container">
+                <h2 class="mb-4">API Keys</h2>
+                
+                <div id="api-keys-message" class="hidden"></div>
+                
+                <div id="api-keys-container">
+                    <div id="api-keys-list">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Create API Key</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="add-api-key-message" class="hidden"></div>
+                            
+                            <form id="add-api-key-form">
+                                <div class="form-group">
+                                    <label for="api-key-name">Name</label>
+                                    <input type="text" id="api-key-name" class="form-control" required placeholder="e.g., Router Update">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Permissions</label>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="api-key-domain-management" class="form-check-input">
+                                        <label for="api-key-domain-management" class="form-check-label">Domain Management</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="api-key-profile-management" class="form-check-input">
+                                        <label for="api-key-profile-management" class="form-check-label">Profile Management</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="api-key-allowed-ips">Allowed IPs (optional)</label>
+                                    <input type="text" id="api-key-allowed-ips" class="form-control" placeholder="e.g., 192.168.1.1, 10.0.0.0/24">
+                                    <small>Leave blank to allow from any IP address.</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" id="add-api-key-btn" class="btn btn-primary" data-original-text="Create API Key">Create API Key</button>
+                                </div>
+                            </form>
+                            
+                            <div id="api-key-result" class="mt-3 hidden">
+                                <div class="alert alert-warning">
+                                    <p><strong>Important:</strong> Copy your API key now. You won't be able to see it again!</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="api-key-value">API Key</label>
+                                    <input type="text" id="api-key-value" class="form-control" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Billing Section -->
+        <section id="billing" class="hidden">
+            <div class="container">
+                <h2 class="mb-4">Billing</h2>
+                
+                <div id="billing-message" class="hidden"></div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Current Plan</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>You are currently on the <strong class="plan-info">Free</strong> plan.</p>
+                        <p>Upgrade your plan to get more features and domains.</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3>Subscription Plans</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="subscription-plans">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Transaction History</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="transactions-list">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="hidden">
+            <div class="container">
+                <h2 class="mb-4">Profile</h2>
+                
+                <div id="profile-message" class="hidden"></div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Update Profile</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="update-profile-form">
+                            <div class="form-group">
+                                <label for="profile-username">Username</label>
+                                <input type="text" id="profile-username" class="form-control" readonly>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-email">Email</label>
+                                <input type="email" id="profile-email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-current-password">Current Password</label>
+                                <input type="password" id="profile-current-password" class="form-control">
+                                <small>Required to change password.</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-new-password">New Password</label>
+                                <input type="password" id="profile-new-password" class="form-control">
+                                <small>Leave blank to keep current password.</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-confirm-password">Confirm New Password</label>
+                                <input type="password" id="profile-confirm-password" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" id="update-profile-btn" class="btn btn-primary" data-original-text="Update Profile">Update Profile</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Dynamic DNS</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#login">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://technitium.com/dns/" target="_blank">Technitium DNS Server</a></li>
+                        <li><a href="https://github.com/TechnitiumSoftware/DnsServer" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://forum.technitium.com/" target="_blank">Community Forum</a></li>
+                        <li><a href="https://docs.technitium.com/" target="_blank">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="mailto:support@example.com">Email Support</a></li>
+                        <li><a href="https://forum.technitium.com/" target="_blank">Community Support</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dynamic DNS App for Technitium DNS Server. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

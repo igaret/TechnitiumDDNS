@@ -4,15 +4,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <Version>1.0</Version>
+    <Version>0.1</Version>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-    <Company>NinjaTech AI</Company>
+    <Company>Garet McCallister</Company>
     <Product>Technitium DNS Server</Product>
-    <Authors>NinjaTech AI</Authors>
+    <Authors>Garet McCallister</Authors>
     <AssemblyName>DynamicDnsApp</AssemblyName>
-    <RootNamespace>DynamicDns</RootNamespace>
-    <PackageProjectUrl>https://technitium.com/dns/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/TechnitiumSoftware/DnsServer</RepositoryUrl>
+    <RootNamespace>DDNS</RootNamespace>
+    <PackageProjectUrl>https://github.com/TechnitiumSoftware/DnsServer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/igaret/TechnitiumDDNS</RepositoryUrl>
     <Description>Dynamic DNS service with user registration and payment system for Technitium DNS Server.</Description>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <OutputType>Library</OutputType>
